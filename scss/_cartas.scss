@@ -1,0 +1,35 @@
+  // Colores //
+  $background-tablero: linear-gradient(to bottom, rgb(66, 1, 66),rgb(160, 26, 160), rgb(66, 1, 66));
+  
+  /*LISTA CARTAS - Flex solo para cartas.html*/
+  
+  #listaCartas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: rgba(160, 26, 160, 0.8);
+    background-image: $background-tablero;
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+  }
+  
+  #listaCartas div {
+    background-color: rgba(128, 223, 215, 0.6);
+    flex-basis: 200px;
+    height: 250px;
+    margin: 15px 10px 15px 10px;
+    border-radius: 20px;
+    text-align: center;
+    border-style: solid;
+    border-color:rgba(112, 224, 215, 0.6);
+    transition: transform 0.4s, background-color 0.4s; 
+  }
+  
+  #listaCartas div:hover {
+    border-color:rgb(166, 251, 244);
+    background-color: rgb(112, 224, 215);
+    transform: scale(1.05,1.05);
+    cursor: pointer;
+  }

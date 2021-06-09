@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/*Reset Valores navegador*/
+/*
+* {
+  Margin:0;
+  padding:0;} */
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1; }
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box; }
+
+/* Set a style for all buttons */
+button {
+  background-color: #a01aa0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%; }
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8; }
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336; }
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0; }
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%; }
+
+/* Add padding to containers */
+.container {
+  padding: 16px; }
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px; }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto;
+  /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; }
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold; }
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer; }
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s; }
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none; }
+  .cancelbtn {
+    width: 100%; } }
+
+@media screen and (min-width: 768px) {
+  .modal-content {
+    width: 50%; } }
+
+/*LISTA CARTAS - Flex solo para cartas.html*/
+#listaCartas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: rgba(160, 26, 160, 0.8);
+  background-image: linear-gradient(to bottom, #420142, #a01aa0, #420142);
+  width: 70%;
+  margin: auto;
+  border-radius: 20px; }
+
+#listaCartas div {
+  background-color: rgba(128, 223, 215, 0.6);
+  flex-basis: 200px;
+  height: 250px;
+  margin: 15px 10px 15px 10px;
+  border-radius: 20px;
+  text-align: center;
+  border-style: solid;
+  border-color: rgba(112, 224, 215, 0.6);
+  transition: transform 0.4s, background-color 0.4s; }
+
+#listaCartas div:hover {
+  border-color: #a6fbf4;
+  background-color: #70e0d7;
+  transform: scale(1.05, 1.05);
+  cursor: pointer; }
+
+/*LISTA CARTAS - Grid solo para juegos.html*/
+#juegosGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 100px 50px;
+  justify-items: stretch;
+  border: 1px solid; }
+
+#juegosGrid div {
+  border: 1px solid; }
+
+/*Creamos el bucle para usar los valores del mapa*/
+.juego1 {
+  background-color: #55acee; }
+
+.juego2 {
+  background-color: #3a5795; }
+
+body {
+  font-family: sans-serif; }
+
+#bienvenida {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.2vw;
+  text-align: center;
+  background-color: #a01aa0;
+  background-image: linear-gradient(to bottom, #420142, #a01aa0, #420142);
+  border-style: outset;
+  color: whitesmoke;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 15px;
+  border-radius: 20px; }
+
+#bienvenida #play {
+  top: 10px;
+  background: rgba(187, 161, 187, 0.575); }
+
+/*Estilo Barra de Navegación principal*/
+nav {
+  z-index: 1;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.nav__menu__logo {
+  display: block; }
+  .nav__menu__logo a {
+    color: #11678a;
+    text-decoration: none; }
+
+.nav__menu__page {
+  display: inline-block; }
+  .nav__menu__page a {
+    text-decoration: none;
+    margin: 5px; }
+
+.nav__in {
+  margin-top: 0px;
+  margin-left: -40px; }
+  .nav__in li {
+    display: inline-block; }
+    .nav__in li button {
+      height: 30px;
+      border-style: double;
+      border-color: whitesmoke;
+      text-decoration: none;
+      padding: 0px 20px 0px 20px; }
+
+.active {
+  color: whitesmoke;
+  background-color: #a01aa0;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 50%; }
+
+ul {
+  list-style-type: none; }
+
+/*Estilo para que el video se renderice al ancho del navegador*/
+main {
+  margin-top: 40px; }
+
+#back {
+  z-index: -99;
+  width: 100%;
+  position: relative; }
+
+/*BRID PARA HOME index.html*/
+nav {
+  grid-area: nav; }
+
+#home main {
+  grid-area: main; }
+
+#home footer {
+  grid-area: footer;
+  background-image: linear-gradient(to bottom, #000418, #420142, #000418); }
+
+#home {
+  display: grid;
+  grid-template-areas: "nav" "main" "footer";
+  grid-template-rows: 70px 3fr 1fr;
+  margin: 0px; }
+
+/*Media Quiery para Tablet*/
+@media only screen and (min-width: 768px) {
+  .nav__menu__logo, .nav__menu__page, .nav__in li {
+    display: inline-block; }
+  .nav__menu__page a {
+    margin: 10px; }
+  .nav__in {
+    margin-left: 30px; }
+  .nav__menu__logo {
+    margin-right: 50px; }
+  #juegosGrid {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 100px; } }
+
+/*Media Quiery para Desktop*/
+@media only screen and (min-width: 1024px) {
+  .nav__menu__page a {
+    margin: 20px; }
+  .nav__menu__logo {
+    margin-right: 100px; }
+  #bienvenida {
+    font-size: 2.5vw;
+    margin-left: 25%;
+    margin-right: 25%; } }

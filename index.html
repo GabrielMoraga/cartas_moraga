@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas Locas - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="description" content="El mejor sitio web para coleccionar cartas virtuales, venderlas o jugar con ellas">
+    <meta name="keywords"  content="CARTAS, COLECCIONABLES, VENTA, COMPRA"> 
+</head>
+
+
+<body id="home">
+    <!-- Esta el la barra de navegación principal-->
+    <nav>
+        <ul class="nav__menu">
+            <li class="nav__menu__logo"> <a href="index.html"><h1>Cartas Locas</h1></a></li>
+            <li class="nav__menu__page"><a href="cartas.html">Cartas</a></li>
+            <li class="nav__menu__page"><a href="mundos.html">Mundos</a></li>
+            <li class="nav__menu__page"><a href="juegos.html">Juegos</a></li>
+        </ul>
+
+        <ul class="nav__in">
+            <li><button onclick="document.getElementById('id01').style.display='block'">Login</button></li>
+            <li><button onclick="document.getElementById('id02').style.display='block'">Signin</button></li>
+        </ul>
+
+    </nav>
+  
+<main>
+    <div>
+        <section id="bienvenida">
+            <div>Bienvenido al mejor sitio de Cartas Coleccionables</div>
+            <button type="submit" id="play">play</button>
+        </section>
+        <video id="back" src="backvideo_short.mp4" muted autoplay loop></video>
+    </div>
+</main>
+
+
+<!-- LOG-IN MODAL FORM -->
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Usuario</b></label>
+      <input type="text" placeholder="Ingresa tu Nombre de Usuario" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Ingresa tu Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Recordarme
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">Olvidaste tu <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- SIGN-IN MODAL FORM -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'"
+  class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Completa tus datos para crear una cuenta</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repite el Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>Al crear tu centa estas de acuerdo con nuestros <a href="#" style="color:dodgerblue">Términos & Política de Privacidad</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+        <button type="submit" class="signup">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<footer>
+    <!-- Acá van FAVICONS -->
+
+</footer>
+
+
+</body>
+
+<script>
+    // Despliego el modal para el log-in
+    var modal_01 = document.getElementById('id01');
+    
+    // Cuando el usuario hace click en cualquier lugar fuera del modal, se cierra
+    window.onclick = function(event) {
+      if (event.target == modal_01) {
+        modal_01.style.display = "none";
+      }
+    }
+
+  // Despliego el modal para el sign-in
+  var modal_02 = document.getElementById('id02');
+
+  // Cuando el usuario hace click en cualquier lugar fuera del modal, se cierra
+  window.onclick = function(event) {
+      if (event.target == modal_02) {
+          modal_02.style.display = "none";
+      }
+  }
+</script>
+
+</html>

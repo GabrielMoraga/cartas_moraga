@@ -1,0 +1,152 @@
+
+/*Reset Valores navegador*/
+/*
+* {
+  Margin:0;
+  padding:0;} */
+@import "log-sign";
+@import "cartas";
+@import "juegos";
+
+
+  body{
+    font-family: sans-serif;
+  }
+    
+  #bienvenida {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.2vw;
+    text-align: center;
+    background-color: rgb(160, 26, 160);
+    background-image: linear-gradient(to bottom, rgb(66, 1, 66),rgb(160, 26, 160), rgb(66, 1, 66));
+    border-style:outset;
+    color: whitesmoke;
+    text-transform: uppercase;
+    position: absolute;
+  
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+  
+    padding: 15px;
+    border-radius: 20px;
+  }
+  
+  
+  #bienvenida #play {
+    top: 10px;
+    background: rgba(187, 161, 187, 0.575);
+  }
+  
+  /*Estilo Barra de Navegación principal*/
+
+  nav {
+    z-index: 1;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav__menu__logo {
+      display: block;
+        a {
+          color: rgb(17, 103, 138);
+          text-decoration: none;
+        }
+  }
+  
+  .nav__menu__page {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      margin: 5px;
+    } }
+
+    .nav__in {
+      margin-top: 0px;
+      margin-left: -40px;
+      li {
+        display: inline-block;
+        button {
+          height: 30px;
+          border-style: double;
+          border-color: whitesmoke;
+          text-decoration: none;
+          padding: 0px 20px 0px 20px;
+            } }}
+
+ .active {
+    color: whitesmoke;
+    background-color: rgb(160, 26, 160);
+    padding: 10px;
+    margin: 0px;
+    border-radius: 50%;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  /*Estilo para que el video se renderice al ancho del navegador*/
+
+  main {margin-top: 40px;}
+
+  #back {
+      z-index: -99;
+      width: 100%;
+      position: relative;
+  }
+  
+  /*BRID PARA HOME index.html*/
+  nav {
+    grid-area: nav;
+  }
+  
+  #home main {
+    grid-area: main;
+  }
+  
+  #home footer {
+    grid-area: footer;
+    background-image: linear-gradient(to bottom, rgb(0, 4, 24),rgb(66, 1, 66), rgb(0, 4, 24));
+  }
+  
+  #home {
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "main"
+      "footer";
+    grid-template-rows: 70px 3fr 1fr;
+    margin: 0px;
+  }
+  
+  /*Media Quiery para Tablet*/
+
+  @media only screen and (min-width: 768px) {
+    .nav__menu__logo, .nav__menu__page, .nav__in li {
+      display: inline-block;}
+          .nav__menu__page a {margin: 10px;}
+          .nav__in {margin-left: 30px;}
+          .nav__menu__logo {margin-right: 50px;}
+  
+    #juegosGrid {
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 50px 100px;
+    }
+  }
+  
+  /*Media Quiery para Desktop*/
+  @media only screen and (min-width: 1024px) {
+
+    .nav__menu__page a {margin: 20px;}
+    .nav__menu__logo {margin-right: 50px*2;}
+  
+    #bienvenida {
+      font-size: 2.5vw;
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+  }

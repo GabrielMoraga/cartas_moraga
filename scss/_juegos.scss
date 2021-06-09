@@ -1,0 +1,24 @@
+  /*LISTA CARTAS - Grid solo para juegos.html*/
+  #juegosGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 100px 50px;
+    justify-items: stretch;
+    border: 1px solid;
+  }
+
+  #juegosGrid div {
+    border: 1px solid;
+  }
+
+
+$juego-color: ( /*Declaramos nuestro mapa*/
+        juego1: #55acee,
+        juego2:  #3a5795
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $juego, $color in $juego-color {
+   .#{$juego} {
+       background-color: $color;
+   }
+}
